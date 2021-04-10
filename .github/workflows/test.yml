@@ -44,4 +44,4 @@ jobs:
           name: 'TEST'
           value: '123'
           repository: SK-415/BiliSessdataShare
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
