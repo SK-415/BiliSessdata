@@ -37,7 +37,7 @@ jobs:
           git config --global user.name "SK-415"
           git add .
           git commit -m "It works!"
-          git push origin main
+          git push
 
       # Runs a single command using the runners shell
 #       - name: Run a one-line script
