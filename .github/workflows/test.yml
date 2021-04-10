@@ -29,9 +29,11 @@ jobs:
         with:
           python-version: '3.9'
       
-      - run: pip show requests
+      - run: python --version
       
-      - run: pip3 show requests
+      - run: python
+      
+      - run: print('Hello World!')
       # Runs a single command using the runners shell
 #       - name: Run a one-line script
 #         run: echo Hello, world!
