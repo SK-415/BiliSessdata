@@ -29,22 +29,19 @@ jobs:
 #         with:
 #           python-version: '3.9'
 
-      - run: date > generated.txt
+#       - run: date > generated.txt
 
-      - name: git config
-        run: |
-          git config --global user.email "SK-415@users.noreply.github.com"
-          git config --global user.name "SK-415"
-          git add .
-          git commit -m "It works!"
-          git push
-
-      # Runs a single command using the runners shell
-#       - name: Run a one-line script
-#         run: echo Hello, world!
-
-#       # Runs a set of commands using the runners shell
-#       - name: Run a multi-line script
+#       - name: git config
 #         run: |
-#           echo Add other actions to build,
-#           echo test, and deploy your project.
+#           git config --global user.email "SK-415@users.noreply.github.com"
+#           git config --global user.name "SK-415"
+#           git add .
+#           git commit -m "It works!"
+#           git push
+
+      - uses: hmanzur/actions-set-secret@v2.0.0
+        with:
+          name: 'TEST'
+          value: '123'
+          repository: SK-415/BiliSessdataShare
+          token: ${{ secrets.GITHUB_TOKEN }}
