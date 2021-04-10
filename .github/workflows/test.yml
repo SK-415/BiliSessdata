@@ -37,6 +37,11 @@ jobs:
       
       - run: ls
       
+      - name: git config
+        run: |
+          git config --global user.email "2967923486@qq.com"
+          git config --global user.name "SK-415"
+      
       - run: git add test.txt
       
       - run: git commit -m "It works!"
