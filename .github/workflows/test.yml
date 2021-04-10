@@ -34,6 +34,8 @@ jobs:
       - run: ls
       
       - run: python -c "open('test.txt', 'w')"
+      
+      - run: ls
       # Runs a single command using the runners shell
 #       - name: Run a one-line script
 #         run: echo Hello, world!
