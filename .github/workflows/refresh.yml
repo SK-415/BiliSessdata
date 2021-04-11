@@ -1,0 +1,32 @@
+name: refresh
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      
+      - name: refresh
+        env:
+          REPO_ACCESS_TOKEN: ${{ REPO_ACCESS_TOKEN }}
+          ACCESS_TOKEN: ${{ ACCESS_TOKEN }}
+          REFRESH_TOKEN: ${{ REFRESH_TOKEN }}
+
+      - name: push update
+        run: |
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add .
+          git commit -m "update SESSDATA"
+          git push
