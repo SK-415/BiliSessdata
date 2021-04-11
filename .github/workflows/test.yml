@@ -39,9 +39,15 @@ jobs:
 #           git commit -m "It works!"
 #           git push
 
-      - uses: hmanzur/actions-set-secret@v2.0.0
-        with:
-          name: 'TEST'
-          value: '123'
-          repository: SK-415/BiliSessdataShare
-          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+      - name: echo
+        run: |
+          echo ${{ secrets.REPO_ACCESS_TOKEN }}
+          echo ${{ secrets.TEST }}
+          echo ${{ secrets.TESt }}
+        
+#       - uses: hmanzur/actions-set-secret@v2.0.0
+#         with:
+#           name: 'TEST'
+#           value: '123'
+#           repository: SK-415/BiliSessdataShare
+#           token: ${{ secrets.REPO_ACCESS_TOKEN }}
