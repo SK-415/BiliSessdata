@@ -41,9 +41,12 @@ jobs:
 
       - name: echo
         run: |
-          echo ${{ secrets.REPO_ACCESS_TOKEN }}
-          echo ${{ secrets.TEST }}
-          echo ${{ secrets.TESt }}
+          echo REPO_ACCESS_TOKEN
+          echo TEST
+          echo test
+        env:
+          REPO_ACCESS_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
+          TEST: ${{ secrets.TEST }}
         
 #       - uses: hmanzur/actions-set-secret@v2.0.0
 #         with:
