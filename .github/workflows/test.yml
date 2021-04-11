@@ -41,9 +41,9 @@ jobs:
 
       - name: echo
         run: |
-          echo REPO_ACCESS_TOKEN
-          echo TEST
-          echo test
+          echo $REPO_ACCESS_TOKEN
+          echo $TEST
+          echo $test
         env:
           REPO_ACCESS_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
           TEST: ${{ secrets.TEST }}
