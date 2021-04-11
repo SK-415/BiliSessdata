@@ -23,9 +23,9 @@ jobs:
       - name: refresh
         run: python refresh.py
         env:
-          REPO_ACCESS_TOKEN: ${{ REPO_ACCESS_TOKEN }}
-          ACCESS_TOKEN: ${{ ACCESS_TOKEN }}
-          REFRESH_TOKEN: ${{ REFRESH_TOKEN }}
+          REPO_ACCESS_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
 
       - name: push update
         run: |
