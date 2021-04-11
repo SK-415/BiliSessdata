@@ -21,7 +21,9 @@ jobs:
           python-version: '3.x'
       
       - name: refresh
-        run: python refresh.py
+        run: |
+          pip install requests pynacl
+          python refresh.py
         env:
           REPO_ACCESS_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
