@@ -42,7 +42,7 @@ def get_public_key():
 
 
 def update_secret(name, value):
-    encrypt_value = encrypt(value)
+    encrypt_value = encrypt(KEY, value)
     params = {
         'encrypted_value': encrypt_value,
         'key_id': KEY_ID
