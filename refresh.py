@@ -6,6 +6,7 @@ from hashlib import md5
 from urllib.parse import urlencode
 
 import requests
+import pytz
 from nacl import encoding, public
 
 
@@ -73,7 +74,7 @@ def refresh():
     update_secret('access_token', access_token)
     update_secret('refresh_token', refresh_token)
     with open('SESSDATA', 'w', encoding='utf-8') as f:
-        f.write(json.dumps({'value': sessdata, 'updated': str(datetime.now())}))
+        f.write(json.dumps({'value': sessdata, 'updated': datetime.now(pytz.timezone('Asia/Shanghai')).strftime('%Y-%m-%d %H:%M:%S %Z')}))
 
 
 if __name__ == "__main__":
