@@ -66,9 +66,7 @@ def refresh():
     }
     params['sign'] = get_sign(params)
     url = f"https://passport.bilibili.com/api/v2/oauth2/refresh_token"
-    r = requests.post(url, params=params).json()
-    print(r)
-    r = r['data']
+    r = requests.post(url, params=params).json()['data']
     access_token = r['token_info']['access_token']
     refresh_token = r['token_info']['refresh_token']
     sessdata = r['cookie_info']['cookies'][4]['value']
