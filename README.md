@@ -4,7 +4,7 @@
 
 共享一个 B站 的 SESSDATA，每天自动更新，保证长期有效。
 
-这个项目主要是为了让 [HarukaBot](https://github.com/SK-415/HarukaBot) 用户不登录也可以请求一些需要 SESSDATA 的 API。如果你碰巧有类似需求，请随意取用。
+~~这个项目主要是为了让 [HarukaBot](https://github.com/SK-415/HarukaBot) 用户不登录也可以请求一些需要 SESSDATA 的 API。~~（2021.4.21：事实证明这个思路问题很大，根本无法实现。不过只要B站不改API这个项目应该是可以一直自己跑下去的，所以……）如果你碰巧有类似需求，请随意取用。
 
 ## 那么什么是 SESSDATA？
 
